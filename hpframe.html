@@ -1,0 +1,649 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="/jsxsd/assets/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/jsxsd/assets/plugins/layui/css/layui.css?sjc=V1.35"/>
+	<link rel="stylesheet" type="text/css" href="/jsxsd/assets/css/modules/personal-center.css" />
+	<link rel="stylesheet" type="text/css" href="/jsxsd/assets/css/themes/edu-bg-balck.css" />
+	<link rel="stylesheet" type="text/css" href="/jsxsd/js/artDialog/skin/chrome/chrome.css" />
+
+	<script type="text/javascript" src="/jsxsd/js/artDialog/artDialog.js"></script>
+	<script type="text/javascript" src="/jsxsd/js/jquery-min.js" language="javascript"></script>
+	<script type="text/javascript" src="/jsxsd/js/common.js" language="javascript"></script>
+	<script type="text/javascript" src="/jsxsd/js/iepngfix_tilebg.js" language="javascript"></script>
+	<link rel="stylesheet" type="text/css" href="/jsxsd/bootstrap/css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="/jsxsd/framework/teacher/css/css.css"/>
+	<link rel="stylesheet" type="text/css" href="/jsxsd/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="/jsxsd/js/My97DatePicker/skin/WdatePicker.css" />
+	<link href="/jsxsd/framework/images/blue.css" rel="stylesheet" type="text/css" id="link_theme" />
+
+	<title>学生端-个人中心</title>
+
+</head>
+<body>
+<form action="" name="Form1" id="Form1" method="post" target="_self">
+<div class="personal-center student-personal-center">
+
+	<div class="personal-left-item">
+		<div class="personal-banner">
+			<img src="/jsxsd/assets/images/banner.png"/>
+		</div>
+		<!-- 课表 -->
+		<style>
+			.personal-title{
+				display: flex;
+				justify-content: space-between;
+				height: auto;
+			}
+			.personal-common .layui-tab-title .layui-this:after{
+				height: 100%;
+			}
+			.personal-common .layui-tab-title{
+				width: 50%;
+				height: auto;
+			}
+			.personal-common .layui-tab-title li{
+				width: 10rem;
+				min-width: auto;
+				white-space: normal;
+				word-break: break-all;
+				line-height: 16px;
+				padding:5px 20px;
+				position: relative;
+				height: 100%;
+			}
+			.dot{
+				display: inline-flex;
+				border-radius: 18px;
+				color: #fff;
+				background-color: red;
+				padding: 0rem 0.3rem;
+				align-items: center;
+				justify-content: center;
+				font-size: 12px;
+				position: absolute;
+				right: 0.2rem;
+				top: 0.5rem;
+			}
+		</style>
+
+		<div class="personal-common layui-tab">
+			<div class="personal-title">
+				<ul class="layui-tab-title">
+					
+						<li data-value="EB5693B95B204102B2E28C5624C6E9ED" class="layui-this li_sjms" name="kbjcmsid" onclick="se(this)">默认节次模式<span class="dot">0</span></li>
+
+					
+				</ul>
+				<div class="title-right">
+					<select name="semester">
+						<option value="">2024-2025-3</option>
+					</select>
+
+
+					<select  name="week" id="week" onchange="se()">
+						<option value="">--请选择--</option>
+						
+							<option value="2025-07-13"   selected>第一周</option>
+						
+							<option value="2025-07-20"   >第二周</option>
+						
+							<option value="2025-07-27"   >第三周</option>
+						
+							<option value="2025-08-03"   >第四周</option>
+						
+							<option value="2025-08-10"   >第五周</option>
+						
+							<option value="2025-08-17"   >第六周</option>
+						
+							<option value="2025-08-24"   >第七周</option>
+						
+							<option value="2025-08-31"   >第八周</option>
+						
+					</select>
+
+
+				</div>
+			</div>
+
+			<div class="layui-tab-content">
+				<div class="layui-tab-item layui-show">
+					<ul class="notice-ul">
+						<div class="noticelist" id="kbLoading">
+
+						</div>
+					</ul>
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+		<div class="personal-common">
+			<div class="personal-title" style="height: 10%;">
+				<span style="position: relative;">我的课程</span>
+				<div class="title-right">
+					<span style="position: relative;">学年学期</span>
+					<select  name="xnxq01id" id="xnxq01id" onchange="document.getElementById('Form1').submit();">
+						
+							<option value="2027-2028-3"  >2027-2028-3</option>
+						
+							<option value="2027-2028-2"  >2027-2028-2</option>
+						
+							<option value="2027-2028-1"  >2027-2028-1</option>
+						
+							<option value="2026-2027-3"  >2026-2027-3</option>
+						
+							<option value="2026-2027-2"  >2026-2027-2</option>
+						
+							<option value="2026-2027-1"  >2026-2027-1</option>
+						
+							<option value="2025-2026-3"  >2025-2026-3</option>
+						
+							<option value="2025-2026-2"  >2025-2026-2</option>
+						
+							<option value="2025-2026-1"  >2025-2026-1</option>
+						
+							<option value="2024-2025-3"  selected="selected">2024-2025-3</option>
+						
+							<option value="2024-2025-2"  >2024-2025-2</option>
+						
+							<option value="2024-2025-1"  >2024-2025-1</option>
+						
+							<option value="2023-2024-3"  >2023-2024-3</option>
+						
+							<option value="2023-2024-2"  >2023-2024-2</option>
+						
+							<option value="2023-2024-1"  >2023-2024-1</option>
+						
+							<option value="2022-2023-3"  >2022-2023-3</option>
+						
+							<option value="2022-2023-2"  >2022-2023-2</option>
+						
+							<option value="2022-2023-1"  >2022-2023-1</option>
+						
+							<option value="2021-2022-3"  >2021-2022-3</option>
+						
+							<option value="2021-2022-2"  >2021-2022-2</option>
+						
+							<option value="2021-2022-1"  >2021-2022-1</option>
+						
+							<option value="2020-2021-3"  >2020-2021-3</option>
+						
+							<option value="2020-2021-2"  >2020-2021-2</option>
+						
+							<option value="2020-2021-1"  >2020-2021-1</option>
+						
+							<option value="2019-2020-3"  >2019-2020-3</option>
+						
+							<option value="2019-2020-2"  >2019-2020-2</option>
+						
+							<option value="2019-2020-1"  >2019-2020-1</option>
+						
+							<option value="2018-2019-3"  >2018-2019-3</option>
+						
+							<option value="2018-2019-2"  >2018-2019-2</option>
+						
+							<option value="2018-2019-1"  >2018-2019-1</option>
+						
+							<option value="2017-2018-3"  >2017-2018-3</option>
+						
+							<option value="2017-2018-2"  >2017-2018-2</option>
+						
+							<option value="2017-2018-1"  >2017-2018-1</option>
+						
+					</select>
+				</div>
+			</div>
+			
+			<div class="examlist">
+				<ul class="list-group list_tz" style="margin-bottom:0;">
+					
+				</ul>
+			</div>
+			
+			
+		</div>
+	</div>
+
+
+
+	<div class="personal-right-item">
+		<div class="personal-function personal-common personal-height">
+			<div class="personal-title"> 常用功能
+				<div class="title-right"> </div>
+			</div>
+			<ul>
+
+				
+				
+
+				
+				
+
+				
+						
+						
+							<div class="grid"
+								 onclick="kjcdShow('NEW_JSD_JXFW','','NEW_JSD_JXFW_WDKB_GRKBSS','/jskb/jskb_list.do','个人课表信息')">
+								<div class="grid__icon">
+									<img src="/jsxsd/framework/teacher/images/tb9.png"/>
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+										个人课表信息
+								</p>
+							</div>
+						
+
+				
+						
+						
+							<div class="grid"
+								 onclick="kjcdShow('NEW_JSD_WDZM','NEW_XSD_WDZM_JXZL','NEW_JSD_WDZM_JSZL_CK','/jxzl/jxzl_query','教学周历查询')">
+								<div class="grid__icon">
+									<img src="/jsxsd/framework/teacher/images/tb12.png"/>
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+										教学周历查询
+								</p>
+							</div>
+						
+
+				
+						
+						
+							<div class="grid"
+								 onclick="kjcdShow('NEW_JSD_KWCJ','NEW_JSD_KWCJ_SSCJ','NEW_JSD_KWCJ_SSCJ_SSPSCJLR','/cjgl/pscjlr_list.do','过程成绩管理')">
+								<div class="grid__icon">
+									<img src="/jsxsd/framework/teacher/images/tb8.png"/>
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+										过程成绩管理
+								</p>
+							</div>
+						
+
+				
+						
+						
+							<div class="grid"
+								 onclick="kjcdShow('NEW_JSD_KWCJ','NEW_JSD_KWCJ_SSCJ','NEW_JSD_KWCJ_SSCJ_SSCJLR','/cjgl/cjlrcx','学生成绩录入')">
+								<div class="grid__icon">
+									<img src="/jsxsd/framework/teacher/images/tb8.png"/>
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+										学生成绩录入
+								</p>
+							</div>
+						
+
+				
+						
+						
+							<div class="grid"
+								 onclick="kjcdShow('NEW_JSD_JXKP','NEW_JSD_JXKP_JSBJ','NEW_JSD_JXKP_JSBJ_BJJGCS','/jspj/pjjg_list.do','评价结果查询')">
+								<div class="grid__icon">
+									<img src="/jsxsd/framework/teacher/images/tb7.png"/>
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+										评价结果查询
+								</p>
+							</div>
+						
+
+				
+						
+						
+							<div class="grid"
+								 onclick="kjcdShow('NEW_JSD_JXFW','NEW_XSD_PYGL_XKGL','NEW_JSD_JXFW_WDKB_CSJSJY','/kbxx/jsjy_query','查询教室借用')">
+								<div class="grid__icon">
+									<img src="/jsxsd/framework/teacher/images/tb12.png"/>
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+										查询教室借用
+								</p>
+							</div>
+						
+
+				
+						
+						
+							<div class="grid"
+								 onclick="kjcdShow('NEW_JSD_JXFW','NEW_JSD_JXFW_WDKB','NEW_JSD_JXFW_WDKB_GRTKSQ','/kbxx/jstksqcx_sd','个人调课申请')">
+								<div class="grid__icon">
+									<img src="/jsxsd/framework/teacher/images/tb11.png"/>
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+										个人调课申请
+								</p>
+							</div>
+						
+
+				
+						
+						
+							<div class="grid"
+								 onclick="kjcdShow('NEW_JSD_WDZM','NEW_JSD_WDZM_WDGL','NEW_JSD_WDZM_WDGL_WDNRGL','/wdgl/wdnr_list','文档内容管理')">
+								<div class="grid__icon">
+									<img src="/jsxsd/framework/teacher/images/tb10.png"/>
+								</div>
+								<p class="grid__label" style="margin-top: 10px;">
+										文档内容管理
+								</p>
+							</div>
+						
+
+				
+
+
+			</ul>
+
+
+		</div>
+		<div class="personal-common">
+			<div class="personal-title">教学进程
+				<div class="title-right">
+					<span id="zlny">2019年6月</span>
+					<i class="iconfont icon-zuo011"  onclick="loadzltable_n('iz' )"></i>
+					<i class="iconfont icon-you011"    onclick="loadzltable_n('iy' )" ></i>
+				</div>
+			</div>
+
+
+                <div class="panel-body" id="zltable"  >
+                </div>
+		</div>
+		<!-- 我的留言 -->
+		<!-- 通知公告 -->
+		<div class="personal-common personal-height32">
+			<div class="personal-title">通知公告
+				<div class="title-right">
+
+				</div>
+			</div>
+			<ul class="notice-ul">
+				<div class="noticelist" id="ul_tzggList">
+
+				</div>
+			</ul>
+		</div>
+
+		<div class="personal-common personal-height32">
+			<div class="personal-title">审核通知
+				<div class="title-right">
+				</div>
+			</div>
+			<ul class="notice-ul">
+				<div class="noticelist" id="ul_tzxxList">
+
+				</div>
+			</ul>
+		</div>
+	</div>
+</div>
+</form>
+<script type='text/javascript' src='../js/artDialog/artDialog.js'></script>
+<script type="text/javascript" src="/jsxsd/assets/plugins/layui/layui.js"></script>
+
+<script>
+	function jgptShow(){
+		var strUrl="/jsxsd/qzapp/getJgpturl";
+		$.ajax( {
+			url:strUrl,
+			type:"post",
+			cache:false,
+			dataType:"text",
+			success:function(url) {
+				window.open(url)
+			},
+			error:function() {
+				alert("计算异常！");
+			}
+		});
+	}
+
+	function wbljShow(linkurl){
+		window.open(linkurl);
+	}
+
+
+
+	function loadingTzgg() {
+
+		$("#ul_tzggList").load("/jsxsd/framework/main_index_loadtzgg.jsp");
+	}
+	function loadingTzxx() {
+
+		$("#ul_tzxxList").load("/jsxsd/framework/main_index_loadtzxx.jsp");
+	}
+	function kjcdShow(yjcode, ejcode, sjcode, url, name){
+		parent.showMenuErji($("li[data-sjcode='"+sjcode+"']",parent.document),name,3);
+	}
+
+	function se(t){
+		var rq=document.getElementById("week").value;
+		var kbjcmss = document.getElementsByName("kbjcmsid");
+		var kbjcmsid="";
+		for (var i =0;i<kbjcmss.length;i++){
+			if(kbjcmss[i].className == "layui-this"){
+				kbjcmsid = $(kbjcmss[i]).data("value");
+			}
+		}
+		if(t!=null){
+			kbjcmsid = $(t).data("value");
+		}
+		if("1"=="0"){
+			//document.getElementById("kbjcmsid").style='display:none';
+			$("#kbLoading").load("/jsxsd/framework/main_index_loadkb_ljy.htmlx?rq="+rq);
+		}else if("14655"=="10541"){
+			$("#kbLoading").load("/jsxsd/framework/main_index_loadkb_hzy.htmlx?rq="+rq+"&sjmsValue="+kbjcmsid+"&xnxqid="+"");
+		}else{
+			$("#kbLoading").load("/jsxsd/framework/main_index_loadkb.htmlx?rq="+rq+"&sjmsValue="+kbjcmsid+"&xnxqid="+ "2024-2025-3");
+		}
+	}
+
+	$(function(){
+		//注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+		layui.use('element', function(){
+			var element = layui.element;
+
+			//…
+		});
+		//	loadingDbsy('ul_dbsyList');
+		//	t_img = setTimeout(function(){
+		se();
+		//	},5);
+
+		//	$("#kbLoading").load("/jsxsd/framework/main_index_loadkb.htmlx?rq="+2025-07-13);
+
+		loadingTzgg();
+		loadingTzxx();
+
+		var date = new Date();
+		var nowyear = date.getFullYear();
+		var nowmonth = date.getMonth()+1;
+		if (nowmonth >= 1 && nowmonth <= 9) {
+			nowmonth = "0" + nowmonth;
+		}
+		var zlny = nowyear + "-"+nowmonth;
+		$("#zlny").text(zlny);
+		$("#zltable").load("/jsxsd/framework/main_index_lzltable.htmlx?ny="+$("#zlny").text());
+
+
+	});
+
+
+	function gotoTzgg(ggid) {
+		 artDialog({
+			id: ggid,
+			title: "通知公告",
+			fixed: true,
+			url: "/jsxsd/framework/main_index_tzgg.htmlx?id="+ggid,
+			lock: true,
+			width: $(window).width() - 200,
+			height: $(window).height() - 300
+		}, null, null, function(){
+			loadingTzgg();
+		});
+	}
+
+	function gotoTzxx(ggid) {
+		 artDialog({
+			id: ggid,
+			title: "通知消息",
+			fixed: true,
+			url: "/jsxsd/framework/main_index_tzxx.htmlx?id="+ggid,
+			lock: true,
+			width: $(window).width() - 1000,
+			height: $(window).height() - 500
+		}, null, null, function(){
+			loadingTzxx();
+		});
+	}
+
+	var ijiao=0;
+	function loadzltable_n(fx) {
+		if (fx=="iz"){
+			ijiao--;
+			if(ijiao<0){
+				ijiao=3;
+			}
+		} else{
+			ijiao++;
+			if(ijiao>3){
+				ijiao=0;
+			}
+		}
+		var ii=0;
+		
+		ii++;
+		if(ii==ijiao){
+			$("#zlny").text( '2025-07');
+		}
+		
+		ii++;
+		if(ii==ijiao){
+			$("#zlny").text( '2025-08');
+		}
+		
+		ii++;
+		if(ii==ijiao){
+			$("#zlny").text( '2025-09');
+		}
+		
+		$("#zltable").load("/jsxsd/framework/main_index_lzltable.htmlx?ny="+$("#zlny").text());
+	}
+
+	
+
+	//我的课程右边操作功能开始
+
+	function kcMouseout(ind){
+		$("#rightLi"+ind).hide();
+	}
+	function kcMouseover(ind){
+		$("#rightLi"+ind).show();
+	}
+
+	/**
+	 操作类型(czlx)：
+	 1.花名册
+	 2.录入成绩
+
+	 是否转入成绩录入系统(sfzr) 获取的是cj0703.cj0703id
+	 */
+	function kcOper(jx0404id,czlx,cj0703id){
+		var operUrl = "";
+		var operTitle = " ";
+		if("1" == czlx){
+			operUrl = "/jsxsd/framework/jsMain_hmc.htmlx?jx0404id="+jx0404id;
+			operTitle = "                                                                                                                                           " +
+					"";
+		}else if ("2" == czlx){
+			operUrl =  "/jsxsd/cjlr/comeInCjlr.do?cj0703id="+cj0703id;
+			
+			operTitle = "成绩录入";
+			if("0" == cj0703id){
+				alert("当前不在成绩录入时间范围内或成绩已送审！");
+				return;
+			}
+		}
+		top.artDialog({
+			id: jx0404id,
+			title: operTitle,
+			fixed: true,
+			url: operUrl,
+			lock: true,
+			width: $(window).width() - 50,
+			height: $(window).height() - 80
+		});
+
+	}
+	/*function dfOper(jx0404id,xnxq01id){
+		var operUrl = "";
+		var operTitle = " ";
+		operUrl = "/jsxsd/kbxx/selectQdb?jx0404id="+jx0404id+"&xnxqid= "+xnxq01id+" )";
+		top.artDialog({
+			id: jx0404id,
+			title: operTitle,
+			fixed: true,
+			url: operUrl,
+			lock: true,
+			width: $(window).width() - 50,
+			height: $(window).height() - 80
+		});
+
+	}*/
+	function pringCj(url){
+		window.open(url,'','width=350,height=250,scrollbars=no ,top=150, left=700, toolbar=no, menubar=no, resizable=no, location=no, status=no');
+	}
+	var fismonth =2025-07;
+	ijiao = fismonth-(nowyear-nowmonth)+1;
+
+	function zhjm() {
+		var strUrl="/jsxsd/ggly/getjmzh";
+		$.ajax( {
+			url:strUrl,
+			type:"post",
+			cache:false,
+			dataType:"text",
+			success:function(dataStr) {
+				var username=dataStr.split("#")[0];
+				var time=dataStr.split("#")[2];
+				var sign=dataStr.split("#")[1];
+				var url = "https://oauth.fanyu.com/sso/cas/10541/1004?username="+username+"&time="+time+"&sign="+sign;
+				window.open(url)
+
+
+			},
+			error:function() {
+				alert("计算异常！");
+			}
+		});
+	}
+</script>
+</body>
+</html>

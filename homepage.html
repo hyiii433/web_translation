@@ -1,0 +1,1550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="/jsxsd/assets/css/common.css" />
+
+
+	<link rel="stylesheet" type="text/css" href="/jsxsd/assets/css/themes/edu-bg-balck.css" />
+
+	<script type="text/javascript" src="/jsxsd/js/artDialog/artDialog.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/jsxsd/js/artDialog/skin/chrome/chrome.css" />
+
+	<title>首页</title>
+
+</head>
+
+<style>
+	.edu-navBar .breadcrumbs{
+		width: calc(100% - 450px);
+	}
+	.black_overlay{
+		display: none;
+		position: absolute;
+		top: 0%;
+		left: 0%;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		z-index:1001;
+		-moz-opacity: 0.8;
+		opacity:.80;
+		filter: alpha(opacity=88);
+	}
+	.white_content2 {
+		display: none;
+		position: absolute;
+		top: 10%;
+		left: 20%;
+		width: 60%;
+		height: 80%;
+		padding: 20px;
+		border: 10px solid white;
+		background-color: white;
+		z-index:1002;
+		overflow: auto;
+	}
+</style>
+<body>
+
+
+
+
+	<div class="edu-container edu-bg-balck">
+	<div class="edu-aside">
+		<header class="edu-header edu-logo">
+			<div style="height: 35px; width: 121px;">
+		</header>
+		<!-- 侧边栏缩放 -->
+		<div class="lsm-expand-btn">
+			<div class="lsm-mini-btn">
+				<label>
+					<input type="checkbox" checked style="display: none;">
+					<i></i>
+				</label>
+			</div>
+		</div>
+		<section class="edu-sideMenu">
+			<ul id="accordion" class="accordion">
+				
+				<li>
+					<div class="link"><i class="iconfont icon-xitongguanli"></i>我的桌面</div>
+
+					<!--  二级菜单循环 -->
+					<ul class="submenu">
+						
+						<li>
+							<div class="link">
+								公告留言<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_WDZM" onclick="showMenuErji(this,'已收公告','3')" data-code="NEW_JSD_WDZM" data-yjcode="NEW_JSD_WDZM" data-ejcode="NEW_JSD_WDZM_GGLY" data-sjcode="NEW_JSD_WDZM_GGLY_YSGG" data-url="/ggly/ysgg_query" >
+									<a href="#" id="NEW_JSD_WDZM_GGLY_YSGG"><b class="dot"></b>已收公告</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_WDZM" onclick="showMenuErji(this,'已收留言','3')" data-code="NEW_JSD_WDZM" data-yjcode="NEW_JSD_WDZM" data-ejcode="NEW_JSD_WDZM_GGLY" data-sjcode="NEW_JSD_WDZM_GGLY_YSLY" data-url="/ggly/ysly_query" >
+									<a href="#" id="NEW_JSD_WDZM_GGLY_YSLY"><b class="dot"></b>已收留言</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_WDZM" onclick="showMenuErji(this,'消息通知','3')" data-code="NEW_JSD_WDZM" data-yjcode="NEW_JSD_WDZM" data-ejcode="NEW_JSD_WDZM_GGLY" data-sjcode="NEW_JSD_WDZM_GGLY_XXTZ" data-url="/ggly/xxtz_query" >
+									<a href="#" id="NEW_JSD_WDZM_GGLY_XXTZ"><b class="dot"></b>消息通知</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+						<li>
+							<div class="link">
+								个人信息<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_WDZM" onclick="showMenuErji(this,'修改个人信息','3')" data-code="NEW_JSD_WDZM" data-yjcode="NEW_JSD_WDZM" data-ejcode="NEW_JSD_WDZM_GRXX" data-sjcode="NEW_JSD_WDZM_GRXX_SGGRXX" data-url="/grsz/grsz_xggrxx.do" >
+									<a href="#" id="NEW_JSD_WDZM_GRXX_SGGRXX"><b class="dot"></b>修改个人信息</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+						<li>
+							<div class="link">
+								在线问答<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_WDZM" onclick="showMenuErji(this,'在线问答','3')" data-code="NEW_JSD_WDZM" data-yjcode="NEW_JSD_WDZM" data-ejcode="NEW_JSD_WDZM_ZXWD" data-sjcode="NEW_JSD_WDZM_ZXWD_ZXWD" data-url="/zxwd/zxwd_opt" >
+									<a href="#" id="NEW_JSD_WDZM_ZXWD_ZXWD"><b class="dot"></b>在线问答</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+						<li>
+							<div class="link">
+								我的信息<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_WDZM" onclick="showMenuErji(this,'教师信息查看','3')" data-code="NEW_JSD_WDZM" data-yjcode="NEW_JSD_WDZM" data-ejcode="NEW_JSD_WDZM_WDSS" data-sjcode="NEW_JSD_WDZM_WDSS_JSXXCK" data-url="/jsxx/queryjsxxjb.do" >
+									<a href="#" id="NEW_JSD_WDZM_WDSS_JSXXCK"><b class="dot"></b>教师信息查看</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+						<li>
+							<div class="link">
+								教学周历<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_WDZM" onclick="showMenuErji(this,'教学周历查询','3')" data-code="NEW_JSD_WDZM" data-yjcode="NEW_JSD_WDZM" data-ejcode="NEW_JSD_WDZM_JSZL" data-sjcode="NEW_JSD_WDZM_JSZL_CK" data-url="/jxzl/jxzl_query" >
+									<a href="#" id="NEW_JSD_WDZM_JSZL_CK"><b class="dot"></b>教学周历查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+						<li>
+							<div class="link">
+								文档管理<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_WDZM" onclick="showMenuErji(this,'文档内容管理','3')" data-code="NEW_JSD_WDZM" data-yjcode="NEW_JSD_WDZM" data-ejcode="NEW_JSD_WDZM_WDGL" data-sjcode="NEW_JSD_WDZM_WDGL_WDNRGL" data-url="/wdgl/wdnr_list" >
+									<a href="#" id="NEW_JSD_WDZM_WDGL_WDNRGL"><b class="dot"></b>文档内容管理</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+					</ul>
+				<li>
+
+						
+				<li>
+					<div class="link"><i class="iconfont icon-zhuanyepinggu"></i>教学服务</div>
+
+					<!--  二级菜单循环 -->
+					<ul class="submenu">
+						
+						<li>
+							<div class="link">
+								培养方案<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'专业培养方案','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_BYFA" data-sjcode="NEW_JSD_JXFW_BYFA_JYBYFA" data-url="/jspyfa/pyfa_find" >
+									<a href="#" id="NEW_JSD_JXFW_BYFA_JYBYFA"><b class="dot"></b>专业培养方案</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'教学计划','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_BYFA" data-sjcode="NEW_JSD_JXFW_BYFA_JSJH" data-url="/jspyfa/jxjh_query" >
+									<a href="#" id="NEW_JSD_JXFW_BYFA_JSJH"><b class="dot"></b>教学计划</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'通选开课申请','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_BYFA" data-sjcode="NEW_JSD_JXFW_BYFA_SJKKSQ" data-url="/jspyfa/szkksq_query" >
+									<a href="#" id="NEW_JSD_JXFW_BYFA_SJKKSQ"><b class="dot"></b>通选开课申请</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'教学任务确认','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_BYFA" data-sjcode="NEW_JSD_JXFW_JXRWQR" data-url="/jspyfa/jxrwqr_query" >
+									<a href="#" id="NEW_JSD_JXFW_JXRWQR"><b class="dot"></b>教学任务确认</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+						<li>
+							<div class="link">
+								我的课表<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'个人课表信息','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_WDKB" data-sjcode="NEW_JSD_JXFW_WDKB_GRKBSS" data-url="/jskb/jskb_list.do" >
+									<a href="#" id="NEW_JSD_JXFW_WDKB_GRKBSS"><b class="dot"></b>个人课表信息</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'个人调课申请','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_WDKB" data-sjcode="NEW_JSD_JXFW_WDKB_GRTKSQ" data-url="/kbxx/jstksqcx_sd" >
+									<a href="#" id="NEW_JSD_JXFW_WDKB_GRTKSQ"><b class="dot"></b>个人调课申请</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'班级课表查询','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_WDKB" data-sjcode="NEW_JSD_JXFW_WDKB_BJKBGL" data-url="/kbcx/kbxx_xzb" >
+									<a href="#" id="NEW_JSD_JXFW_WDKB_BJKBGL"><b class="dot"></b>班级课表查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'教室课表查询','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_WDKB" data-sjcode="NEW_JSD_JXFW_WDKB_JSKBCSTO" data-url="/kbcx/kbxx_classroom" >
+									<a href="#" id="NEW_JSD_JXFW_WDKB_JSKBCSTO"><b class="dot"></b>教室课表查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'课程课表查询','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_WDKB" data-sjcode="NEW_JSD_JXFW_WDKB_KCKBCS" data-url="/kbcx/kbxx_kc" >
+									<a href="#" id="NEW_JSD_JXFW_WDKB_KCKBCS"><b class="dot"></b>课程课表查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'教学安排查询','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_WDKB" data-sjcode="NEW_JSD_JXFW_WDKB_JXAPCX" data-url="/kbxx/jxapcx" >
+									<a href="#" id="NEW_JSD_JXFW_WDKB_JXAPCX"><b class="dot"></b>教学安排查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'免听/免修审核','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_WDKB" data-sjcode="NEW_JSD_KWCJ_SSCJ_CJQRCS_NEW" data-url="/jsjx/js_cjqr_query_new" >
+									<a href="#" id="NEW_JSD_KWCJ_SSCJ_CJQRCS_NEW"><b class="dot"></b>免听/免修审核</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+						<li>
+							<div class="link">
+								课程信息查询<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'课程信息','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_WDFZKC_KCXXA" data-sjcode="NEW_JSD_JXFW_WDFZKC_KCXXXS" data-url="/xsxk/findKc" >
+									<a href="#" id="NEW_JSD_JXFW_WDFZKC_KCXXXS"><b class="dot"></b>课程信息</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+						<li>
+							<div class="link">
+								教室借用<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'教室借用申请','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_JSJY" data-sjcode="NEW_JSD_JXFW_WDKB_CSJSJY" data-url="/kbxx/jsjy_query" >
+									<a href="#" id="NEW_JSD_JXFW_WDKB_CSJSJY"><b class="dot"></b>教室借用申请</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXFW" onclick="showMenuErji(this,'教室借用记录','3')" data-code="NEW_JSD_JXFW" data-yjcode="NEW_JSD_JXFW" data-ejcode="NEW_JSD_JXFW_JSJY" data-sjcode="NEW_JSD_JXFW_WDKB_JSJYJL" data-url="/kbxx/jsjyjl_query" >
+									<a href="#" id="NEW_JSD_JXFW_WDKB_JSJYJL"><b class="dot"></b>教室借用记录</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+					</ul>
+				<li>
+
+						
+				<li>
+					<div class="link"><i class="iconfont icon-jiaowuyunxing"></i>考务成绩</div>
+
+					<!--  二级菜单循环 -->
+					<ul class="submenu">
+						
+						<li>
+							<div class="link">
+								考试事务<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_KWCJ" onclick="showMenuErji(this,'课程考试安排查询','3')" data-code="NEW_JSD_KWCJ" data-yjcode="NEW_JSD_KWCJ" data-ejcode="NEW_JSD_KWCJ_KSSW" data-sjcode="NEW_JSD_KWCJ_KSSW_KCKWABCS" data-url="/jskw/jskckwap_query" >
+									<a href="#" id="NEW_JSD_KWCJ_KSSW_KCKWABCS"><b class="dot"></b>课程考试安排查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_KWCJ" onclick="showMenuErji(this,'考务安排查询','3')" data-code="NEW_JSD_KWCJ" data-yjcode="NEW_JSD_KWCJ" data-ejcode="NEW_JSD_KWCJ_KSSW" data-sjcode="NEW_JSD_KWCJ_KSSW_kWABCS" data-url="/jskw/jskwap_query" >
+									<a href="#" id="NEW_JSD_KWCJ_KSSW_kWABCS"><b class="dot"></b>考务安排查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_KWCJ" onclick="showMenuErji(this,'考试信息查询','3')" data-code="NEW_JSD_KWCJ" data-yjcode="NEW_JSD_KWCJ" data-ejcode="NEW_JSD_KWCJ_KSSW" data-sjcode="NEW_JSD_KWCJ_KSSW_KSXXCX" data-url="/jskw/jsxxap_query" >
+									<a href="#" id="NEW_JSD_KWCJ_KSSW_KSXXCX"><b class="dot"></b>考试信息查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_KWCJ" onclick="showMenuErji(this,'监考调代申请','3')" data-code="NEW_JSD_KWCJ" data-yjcode="NEW_JSD_KWCJ" data-ejcode="NEW_JSD_KWCJ_KSSW" data-sjcode="NEW_JSD_KWCJ_KSSW_kWABCS_TD" data-url="/jskw/jskwaptd_query" >
+									<a href="#" id="NEW_JSD_KWCJ_KSSW_kWABCS_TD"><b class="dot"></b>监考调代申请</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+						<li>
+							<div class="link">
+								学生成绩<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_KWCJ" onclick="showMenuErji(this,'考勤表','3')" data-code="NEW_JSD_KWCJ" data-yjcode="NEW_JSD_KWCJ" data-ejcode="NEW_JSD_KWCJ_SSCJ" data-sjcode="NEW_JSD_KWCJ_SSCJ_CJDFC" data-url="/kbxx/cjdfccx" >
+									<a href="#" id="NEW_JSD_KWCJ_SSCJ_CJDFC"><b class="dot"></b>考勤表</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_KWCJ" onclick="showMenuErji(this,'学生成绩录入','3')" data-code="NEW_JSD_KWCJ" data-yjcode="NEW_JSD_KWCJ" data-ejcode="NEW_JSD_KWCJ_SSCJ" data-sjcode="NEW_JSD_KWCJ_SSCJ_SSCJLR" data-url="/cjgl/cjlrcx" >
+									<a href="#" id="NEW_JSD_KWCJ_SSCJ_SSCJLR"><b class="dot"></b>学生成绩录入</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_KWCJ" onclick="showMenuErji(this,'成绩修改管理','3')" data-code="NEW_JSD_KWCJ" data-yjcode="NEW_JSD_KWCJ" data-ejcode="NEW_JSD_KWCJ_SSCJ" data-sjcode="NEW_JSD_KWCJ_SSCJ_CJSGGL" data-url="/cjgl/cjxggl_query" >
+									<a href="#" id="NEW_JSD_KWCJ_SSCJ_CJSGGL"><b class="dot"></b>成绩修改管理</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_KWCJ" onclick="showMenuErji(this,'过程成绩管理','3')" data-code="NEW_JSD_KWCJ" data-yjcode="NEW_JSD_KWCJ" data-ejcode="NEW_JSD_KWCJ_SSCJ" data-sjcode="NEW_JSD_KWCJ_SSCJ_SSPSCJLR" data-url="/cjgl/pscjlr_list.do" >
+									<a href="#" id="NEW_JSD_KWCJ_SSCJ_SSPSCJLR"><b class="dot"></b>过程成绩管理</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+					</ul>
+				<li>
+
+						
+				<li>
+					<div class="link"><i class="iconfont icon-biyesheji"></i>教学考评</div>
+
+					<!--  二级菜单循环 -->
+					<ul class="submenu">
+						
+						<li>
+							<div class="link">
+								教学评价<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXKP" onclick="showMenuErji(this,'评价结果查询','3')" data-code="NEW_JSD_JXKP" data-yjcode="NEW_JSD_JXKP" data-ejcode="NEW_JSD_JXKP_JSBJ" data-sjcode="NEW_JSD_JXKP_JSBJ_BJJGCS" data-url="/jspj/pjjg_list.do" >
+									<a href="#" id="NEW_JSD_JXKP_JSBJ_BJJGCS"><b class="dot"></b>评价结果查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXKP" onclick="showMenuErji(this,'工作量查询','3')" data-code="NEW_JSD_JXKP" data-yjcode="NEW_JSD_JXKP" data-ejcode="NEW_JSD_JXKP_JSBJ" data-sjcode="NEW_JSD_JXKP_JSBJ_GZL" data-url="/jxgzl/jsgzl_find" >
+									<a href="#" id="NEW_JSD_JXKP_JSBJ_GZL"><b class="dot"></b>工作量查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JXKP" onclick="showMenuErji(this,'我的评价','3')" data-code="NEW_JSD_JXKP" data-yjcode="NEW_JSD_JXKP" data-ejcode="NEW_JSD_JXKP_JSBJ" data-sjcode="NEW_JSD_JXKP_JSBJ_WDPJ" data-url="/jspj/wdpj_query.do" >
+									<a href="#" id="NEW_JSD_JXKP_JSBJ_WDPJ"><b class="dot"></b>我的评价</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+					</ul>
+				<li>
+
+						
+				<li>
+					<div class="link"><i class="iconfont icon-zhuanjiazhandian"></i>实践实验</div>
+
+					<!--  二级菜单循环 -->
+					<ul class="submenu">
+						
+						<li>
+							<div class="link">
+								毕业设计<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_SJSY" onclick="showMenuErji(this,'课题申报管理','3')" data-code="NEW_JSD_SJSY" data-yjcode="NEW_JSD_SJSY" data-ejcode="NEW_JSD_SJSY_BYSJ" data-sjcode="NEW_JSD_SJSY_BYSJ_KDSBGL" data-url="/bysj/jskt.do" >
+									<a href="#" id="NEW_JSD_SJSY_BYSJ_KDSBGL"><b class="dot"></b>课题申报管理</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_SJSY" onclick="showMenuErji(this,'课题修改申请','3')" data-code="NEW_JSD_SJSY" data-yjcode="NEW_JSD_SJSY" data-ejcode="NEW_JSD_SJSY_BYSJ" data-sjcode="NEW_JSD_SJSY_BYSJ_XGTMMC" data-url="/bysj/bysjktxglist.do" >
+									<a href="#" id="NEW_JSD_SJSY_BYSJ_XGTMMC"><b class="dot"></b>课题修改申请</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_SJSY" onclick="showMenuErji(this,'学生选题处理','3')" data-code="NEW_JSD_SJSY" data-yjcode="NEW_JSD_SJSY" data-ejcode="NEW_JSD_SJSY_BYSJ" data-sjcode="NEW_JSD_SJSY_BYSJ_SSSDCL" data-url="/view/bysj/xsxt_find.jsp" >
+									<a href="#" id="NEW_JSD_SJSY_BYSJ_SSSDCL"><b class="dot"></b>学生选题处理</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_SJSY" onclick="showMenuErji(this,'任务书填报','3')" data-code="NEW_JSD_SJSY" data-yjcode="NEW_JSD_SJSY" data-ejcode="NEW_JSD_SJSY_BYSJ" data-sjcode="NEW_JSD_SJSY_BYSJ_RWSTB" data-url="/view/bysj/rws_find.jsp" >
+									<a href="#" id="NEW_JSD_SJSY_BYSJ_RWSTB"><b class="dot"></b>任务书填报</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_SJSY" onclick="showMenuErji(this,'开题报告查看','3')" data-code="NEW_JSD_SJSY" data-yjcode="NEW_JSD_SJSY" data-ejcode="NEW_JSD_SJSY_BYSJ" data-sjcode="NEW_JSD_SJSY_BYSJ_KTBG" data-url="/view/bysj/ktbg_find.jsp" >
+									<a href="#" id="NEW_JSD_SJSY_BYSJ_KTBG"><b class="dot"></b>开题报告查看</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_SJSY" onclick="showMenuErji(this,'过程指导情况','3')" data-code="NEW_JSD_SJSY" data-yjcode="NEW_JSD_SJSY" data-ejcode="NEW_JSD_SJSY_BYSJ" data-sjcode="NEW_JSD_SJSY_BYSJ_GCZD" data-url="/view/bysj/sjzd_find.jsp" >
+									<a href="#" id="NEW_JSD_SJSY_BYSJ_GCZD"><b class="dot"></b>过程指导情况</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_SJSY" onclick="showMenuErji(this,'中期报告填报','3')" data-code="NEW_JSD_SJSY" data-yjcode="NEW_JSD_SJSY" data-ejcode="NEW_JSD_SJSY_BYSJ" data-sjcode="NEW_JSD_SJSY_BYSJ_ZQBG" data-url="/view/bysj/zqbg_find.jsp" >
+									<a href="#" id="NEW_JSD_SJSY_BYSJ_ZQBG"><b class="dot"></b>中期报告填报</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_SJSY" onclick="showMenuErji(this,'成绩录入','3')" data-code="NEW_JSD_SJSY" data-yjcode="NEW_JSD_SJSY" data-ejcode="NEW_JSD_SJSY_BYSJ" data-sjcode="NEW_JSD_SJSY_BYSJ_CJLR" data-url="/view/bysj/bysjcjlr_find.jsp" >
+									<a href="#" id="NEW_JSD_SJSY_BYSJ_CJLR"><b class="dot"></b>成绩录入</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+					</ul>
+				<li>
+
+						
+				<li>
+					<div class="link"><i class="iconfont icon-shiyanshi"></i>教育科研</div>
+
+					<!--  二级菜单循环 -->
+					<ul class="submenu">
+						
+						<li>
+							<div class="link">
+								教育科研<i class="iconfont icon-xiala"></i>
+							</div>
+							<ul class="submenu">
+								<!--  三级菜单循环 -->
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JYKY" onclick="showMenuErji(this,'项目申报管理','3')" data-code="NEW_JSD_JYKY" data-yjcode="NEW_JSD_JYKY" data-ejcode="NEW_JSD_JYKY_JYKY" data-sjcode="NEW_JSD_JYKY_JYKY_SMSBGL" data-url="/jyky/querySq.do" >
+									<a href="#" id="NEW_JSD_JYKY_JYKY_SMSBGL"><b class="dot"></b>项目申报管理</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JYKY" onclick="showMenuErji(this,'专家网上评分','3')" data-code="NEW_JSD_JYKY" data-yjcode="NEW_JSD_JYKY" data-ejcode="NEW_JSD_JYKY_JYKY" data-sjcode="NEW_JSD_JYKY_JYKY_ZJWSBF" data-url="/jyky/querySqps.do" >
+									<a href="#" id="NEW_JSD_JYKY_JYKY_ZJWSBF"><b class="dot"></b>专家网上评分</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JYKY" onclick="showMenuErji(this,'项目查询','3')" data-code="NEW_JSD_JYKY" data-yjcode="NEW_JSD_JYKY" data-ejcode="NEW_JSD_JYKY_JYKY" data-sjcode="NEW_JSD_JYKY_JYKY_SMCS" data-url="/jyky/zlgcxx_sb_cx_list.do" >
+									<a href="#" id="NEW_JSD_JYKY_JYKY_SMCS"><b class="dot"></b>项目查询</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JYKY" onclick="showMenuErji(this,'项目材料模板','3')" data-code="NEW_JSD_JYKY" data-yjcode="NEW_JSD_JYKY" data-ejcode="NEW_JSD_JYKY_JYKY" data-sjcode="NEW_JSD_JYKY_JYKY_XMCLMB" data-url="/jyky/xmclmb_list.do" >
+									<a href="#" id="NEW_JSD_JYKY_JYKY_XMCLMB"><b class="dot"></b>项目材料模板</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JYKY" onclick="showMenuErji(this,'中检专家网上评分','3')" data-code="NEW_JSD_JYKY" data-yjcode="NEW_JSD_JYKY" data-ejcode="NEW_JSD_JYKY_JYKY" data-sjcode="NEW_JSD_JYKY_JYKY_ZJZJWSBF" data-url="/jyky/querySqps1.do" >
+									<a href="#" id="NEW_JSD_JYKY_JYKY_ZJZJWSBF"><b class="dot"></b>中检专家网上评分</a>
+								</li>
+
+								
+								
+								
+
+								
+
+
+								<li class="item-file"  data-code="NEW_JSD_JYKY" onclick="showMenuErji(this,'结题专家网上评分','3')" data-code="NEW_JSD_JYKY" data-yjcode="NEW_JSD_JYKY" data-ejcode="NEW_JSD_JYKY_JYKY" data-sjcode="NEW_JSD_JYKY_JYKY_JTZJWSBF" data-url="/jyky/querySqps2.do" >
+									<a href="#" id="NEW_JSD_JYKY_JYKY_JTZJWSBF"><b class="dot"></b>结题专家网上评分</a>
+								</li>
+
+								
+								
+								
+
+								
+
+							</ul>
+						</li>
+
+						
+					</ul>
+				<li>
+
+						
+			
+			</ul>
+		</section>
+	</div>
+	<div class="edu-main">
+		<div class="edu-header edu-navBar">
+			<div class="breadcrumbs">
+				<ul>
+					<li data-index="0">
+						<a  class="current" ><span onclick="showTag('GRZX','',0,this)">个人中心</span> </a>
+						<b></b>
+					</li>
+				</ul>
+			</div>
+			<div class="navBar-right">
+				<div>
+					<i class="icon-tab-left" id="scrollLeft"></i>
+					<i class="icon-tab-right" id="scrollRight"></i>
+				</div>
+				<div style="margin-top: 7px;">
+						<span class="inputbox" >
+		<img src="/jsxsd/js/easyui/themes/icons/searchq.png" alt="" class=""
+			 style="position: absolute;margin-left: 165px;margin-top: 7px;">
+		<input name="findMenu" id="findMenu" type="text" class="input" placeholder="请输入菜单名" style="color: #9798B5;">
+		<div class="search menuCodeUrl" style="width: 200px;max-height:500px;overflow:auto;z-index: 999;position: absolute;">
+			<ul style="width: 200px;overflow:auto;height: 346px;margin-top: 7px;cursor: pointer" class="searchul menuCodeUrl" id="searchul"></ul>
+		</div>
+	</span>
+				</div>
+				<div style="">
+					<div class="edu-badge item">
+						<i class="icon-alarm" onclick="showMenuErji_menu('PTWH','/ggly/xxtz_query','消息通知',3)"></i>
+						<sup class="edu-badge__content is-fixed">	  0  </sup>
+
+					</div>
+				</div>
+				<div class="edu-user">
+					
+						<img src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png">
+					
+					
+					<div class="edu-menu">
+						<div class="userInfo">
+
+							<div>
+								<p style="font-weight: 500;">蔡元哲</p>
+								<span style="font-size: 12px;color:#888888">教师</span>
+							</div>
+						</div>
+						<ul class="user-settings">
+							<li onclick="showTag_1('GRZX','',0,this)">
+								<i class="iconfont icongerenzhongxin"></i>
+								<span>个人中心</span>
+							</li>
+							<li onclick="showMenuErji_menu('PTWH','/grsz/grsz_xgmm','修改密码',3)">
+								<i class="iconfont iconxiugaimima"></i>
+								<span>修改密码</span>
+							</li>
+
+
+							
+
+
+							<li onclick="tcdl()">
+								<i class="iconfont icontuichudenglu"></i>
+								<span>退出登录</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="edu-center">
+			<div id="edu-cm">
+				
+				<iframe id="Frame0" name="Frame0" src="/jsxsd/framework/jsMain_new.htmlx?t1=1" ></iframe>
+				
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<form id="Form1" name="Form1" enctype="multipart/form-data"  action="" target="hideFrame" method="post" >
+	<input type="hidden" id="type" name="type" value="">
+</form>
+
+
+<form action="https://jwxt.sztu.edu.cn//Logon.do?method=logonFromJsxsd"
+	  method="post" id="loginForm1" name="loginForm1">
+	<input type="hidden" id="view" name="view" />
+	<input type="hidden" id="upd" name="upd" value="67B08B027EE9A1C72A4859BBCF019E94" />
+	<input type="hidden" id="ticket" name="ticket" />
+	<input type="hidden" id="token" name="token"/>
+</form>
+
+<iframe id="hideFrame" name="hideFrame" style="width:0px;height:0px;display:none;"></iframe>
+<script type="text/javascript" src="/jsxsd/assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="/jsxsd/assets/js/EventDelegates.js"></script>
+<script type="text/javascript" src="/jsxsd/assets/js/common.js"></script>
+<script type="text/javascript">
+    if (false){
+        document.getElementById('light2').style.display='block';
+        document.getElementById('fade2').style.display='block';
+    }
+	//IE11不支持收缩样式,暂时屏蔽
+	var u = window.navigator.userAgent.toLocaleLowerCase(),
+			ie11 = /(trident)\/([\d.]+)/,
+			b = u.match(ie11);
+	if(b){
+		$(".lsm-expand-btn").remove();
+	}
+
+	//防止浏览器缓存收缩状态导致bug
+	$('.lsm-mini-btn input[type="checkbox"]').prop("checked",true);
+
+	function opengld(){
+		if("1"!='1'){
+			alert("非教师不能进行切换");
+			return;
+		}
+		var height = $(window).height();
+		var width = $(window).width();
+		if(parseInt(height)<750){
+			document.getElementById("view").value = "1";
+		}else{
+			document.getElementById("view").value = "0";
+		}
+		
+		document.getElementById("token").value="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxNDY1NTIwMjEwOTYwIiwiaWF0IjoxNzUyNzUxMjA1LCJleHAiOjE3NTI3NTE1MDV9.pa7jcI7qt2g0nIFazwveRZpDPtr1x8HDuFLuUcUWeps";
+		$.ajax( {
+			url:"/jsxsd/ggly/checkSession.do",
+			type:'post',
+			cache:false,
+			async:false,
+			dataType: "text",
+			success:function(data) {
+				if(data=="no"){
+					document.getElementById("upd").value="";
+					document.getElementById("loginForm1").submit();
+				}else {
+					document.getElementById("loginForm1").submit();
+				}
+			},
+			error:function() {
+				alert("计算错误！");
+			}
+		});
+	}
+
+</script>
+
+
+<script type="text/javascript">
+	//加载新tab菜单
+	function showMenuErji_menu(code,modpicurl,menuname,level) {
+		$("#edu-cm").find("iframe").hide();
+		var src="";
+
+		src = "/jsxsd"+modpicurl;
+		//打开新的tab页，一级菜单暂不打开
+		$("#edu-cm").append("<iframe id='Frame"+frameIndex+"' name='Frame"+frameIndex+"' data-code='"+code+"' src='"+src+"' style='border: 0; margin: 0; width: 100%; height: 100%'></iframe>");
+		//var title = $("a", t).text();
+
+		var html = "<li data-index= '"+frameIndex+"'><a class=\"current\"><span  onclick=\"showTag('"+code+"','', '"+frameIndex+"', this)\">"+menuname+"</span><i class=\"iconfont icon-close01\" onclick=\"closeTag('"+code+"', '"+frameIndex+"', this)\"></i></a><b></b></li>";
+		$(".breadcrumbs > ul > li > a").removeClass("current");
+		$(".breadcrumbs > ul").append(html);
+		frameIndex++;
+        $("#scrollRight").click();
+
+	}
+
+
+
+
+	//显示tab页菜单
+	function showTag_1(code,sjcode, index, t) {
+		$("#edu-cm").find("iframe").hide();
+		$("#Frame"+index).show();
+		$(".breadcrumbs > ul > li > a").removeClass("current");
+		$("#grzx").addClass("current");
+
+		if($('.edu-sideMenu').css('overflow-x')=='hidden'){
+			return;
+		}
+		//联动左侧菜单
+		$("a.active").removeClass("active");
+		$("#"+sjcode).addClass("active");
+		$("ul.accordion > li").removeClass("open");
+		$("#"+sjcode).parents("li").addClass("open");
+		$("ul.submenu").css("display","none");
+		$("#"+sjcode).parents("ul.submenu").css("display","block");
+	}
+
+
+	var frameIndex = 1;
+	//加载新tab菜单
+	function showMenuErji(t,menuname,level) {
+		var code = $(t).data("code");
+		//隐藏原有iframe
+		$("#edu-cm").find("iframe").hide();
+
+		var src="";
+
+		if(level==3){
+
+			src = "/jsxsd"+$(t).data("url");
+
+			var sjcode = $(t).data("sjcode");
+			//是否已经打开当前三级菜单
+			var sjspan = $("#span_"+sjcode);
+			if(sjspan.length>0){
+				//如果是当前菜单，则再次点击后刷新
+				if($("#"+sjcode).hasClass("active")){
+					var index = $("#span_"+sjcode).attr("frameIndex");
+					$("#Frame"+index).attr("src", $('#Frame'+index).attr("src"));
+					$("#Frame"+index).show();
+				}else{
+					sjspan.click();
+				}
+			}else{
+
+				//打开新的tab页，一级菜单暂不打开
+				$("#edu-cm").append("<iframe id='Frame"+frameIndex+"' name='Frame"+frameIndex+"' data-code='"+code+"' src='"+src+"' style='border: 0; margin: 0; width: 100%; height: 100%'></iframe>");
+				//var title = $("a", t).text();
+
+				var html = "<li data-index= '"+frameIndex+"'><a class=\"current\" ><span   id= 'span_"+sjcode+"' frameIndex='"+frameIndex+"' onclick=\"showTag('"+code+"','"+sjcode+"', '"+frameIndex+"', this)\">"+menuname+"</span><i class=\"iconfont icon-close01\" onclick=\"closeTag('"+code+"', '"+frameIndex+"', this)\"></i></a><b></b></li>";
+				$(".breadcrumbs > ul > li > a").removeClass("current");
+				$(".breadcrumbs > ul").append(html);
+				frameIndex++;
+				$("#scrollRight").click();
+			}
+
+			if(!$("#"+sjcode).hasClass("active")){
+				//快捷菜单打开时需要联动左侧菜单
+				$("a.active").removeClass("active");
+				$("#"+sjcode).addClass("active");
+				$("ul.accordion > li").removeClass("open");
+				$("#"+sjcode).parents("li").addClass("open");
+				$("ul.submenu").css("display","none");
+				$("#"+sjcode).parents("ul.submenu").css("display","block");
+			}
+		}
+
+	}
+	//显示tab页菜单
+	function showTag(code,sjcode, index, t) {
+		$("#edu-cm").find("iframe").hide();
+		$("#Frame"+index).show();
+		$(".breadcrumbs > ul > li > a").removeClass("current");
+		$(t).parent("a").addClass("current");
+		if($('.edu-sideMenu').css('overflow-x')=='hidden'){
+			return;
+		}
+		//联动左侧菜单
+		$("a.active").removeClass("active");
+		$("#"+sjcode).addClass("active");
+		$("ul.accordion > li").removeClass("open");
+		$("#"+sjcode).parents("li").addClass("open");
+		$("ul.submenu").css("display","none");
+		$("#"+sjcode).parents("ul.submenu").css("display","block");
+	}
+	function closeTag(code, index, t) {
+		$("#Frame"+index).remove();
+
+		//当前页面关闭后要打开前一个tag
+		if($(t).parent("a").hasClass("current")) {
+			//alert("当前："+$(t).parent("a").parent("li").data("index"));
+			var prevObj = $(t).parent("a").parent("li").prev("li");
+			//$("#Frame"+prevObj.data("index")).show();
+			//alert("上一个："+prevObj.data("index"));
+			showTag('','',prevObj.data("index"),prevObj.find("a").find("span"));
+		}
+
+		$(t).parent("a").parent("li").remove();
+	}
+
+
+
+	$(".theme.theme-blue").click(function(){
+		$("#eduContainer").removeClass("edu-bg-balck");
+		fillResult('0');
+	});
+	$(".theme.theme-black").click(function(){
+		$("#eduContainer").addClass("edu-bg-balck");
+		fillResult('1');
+	});
+
+
+	function tcdl(){
+		window.Form1.action="/jsxsd/xk/LoginToXk?method=exit";
+		window.Form1.target="hideFrame";
+		window.Form1.submit();
+		window.Form1.action="";
+		window.Form1.target="";
+
+	}
+
+
+
+
+	//是否通过快速链接进入 1为是
+	var jumpFlag = "";
+	if("1" == jumpFlag){
+		showMenuErji_menu('','','',3,'');
+	}
+
+
+	function showMenuErji_menu(code,modpicurl,menuname,level,codeej) {
+		$("#edu-cm").find("iframe").hide();
+		var src="";
+
+		src = "/jsxsd"+modpicurl;
+		//打开新的tab页，一级菜单暂不打开
+		$("#edu-cm").append("<iframe id='Frame"+frameIndex+"' name='Frame"+frameIndex+"' data-code='"+code+"' src='"+src+"' style='border: 0; margin: 0; width: 100%; height: 100%'></iframe>");
+		//var title = $("a", t).text();
+
+		var html = "<li data-index= '"+frameIndex+"'><a class=\"current\"><span  onclick=\"showTag('"+code+"','"+codeej+"', '"+frameIndex+"', this)\">"+menuname+"</span><i class=\"iconfont icon-close01\" onclick=\"closeTag('"+code+"', '"+frameIndex+"', this)\"></i></a><b></b></li>";
+		$(".breadcrumbs > ul > li > a").removeClass("current");
+		$(".breadcrumbs > ul").append(html);
+		frameIndex++;
+		$("#scrollRight").click();
+
+	}
+
+</script>
+<script type="text/javascript">
+	//搜索框
+	var menuval = "";
+	var text = document.getElementById('findMenu');
+	var search = document.getElementsByClassName('search')[0];
+	var oul = document.querySelector(".search ul");
+
+	$('body').click(function (e) {
+		if ($(e.target).attr('class') != 'menuCodeUrl') {
+			search.style.display = "none";
+		}
+	});
+
+	text.addEventListener("keyup",function () {
+		search.style.display = "none";
+		if (text.value == "") {
+			return false;
+		}
+		display_Menu(text);
+	})
+	window.onload = function (){
+		search.style.display = "none"
+		text.addEventListener("click",function (event){
+			if (text.value == "") {
+				return false;
+			}
+			display_Menu(text);
+			event.stopPropagation();
+		},false);
+
+		document.Form1.parentNode.addEventListener("click",function () {
+			//search.style.display = "none"
+		},true,9999);
+		document.onkeydown = function () {
+			if (window.event.keyCode == 13) {
+				var firstli = $("#searchul").find("li").eq(0);
+				firstli.click();
+			}
+		}
+	}
+
+	function display_Menu(node) {
+
+		// 获取输入框里面的内容
+		var val = node.value;
+		menuval = val;
+		// 如果输入框中不为空，就让联想列表出现，否则消失
+		search.style.display = text.value != "" ? "block" : "none";
+		$.ajax({
+			url: "/jsxsd/jspyfa/findMenuByQxCode",
+			type: "POST",
+			sync: true,
+			data: {"findname": val},
+			success: function (result) {
+				var data = JSON.parse(result);
+				if ("1" == data.code) {
+					//清空
+					oul.innerHTML = "";
+					var lis = data.lists;
+					$.each(lis, function (idx, elem) {
+						var fucecode = elem.fucecode;
+						var fuceresource = elem.fuceresource;
+						var fucename = elem.fucename;
+						var lis = document.createElement("li");
+						lis.title = fucename;
+						lis.setAttribute("onclick", "showMenuBycode_ss(\"" + fucecode + "\",\"" + fuceresource + "\",\"" + fucename + "\")");
+						lis.className = "searchli menuCodeUrl";
+						// lis.style.textAlign = "center";
+						lis.style.width = "200px";
+						lis.style.height = "30px";
+						lis.style.lineHeight = "20px";
+						lis.style.backgroundColor="white";
+						lis.style.padding="12px";
+						lis.style.color =" #909399";
+						/*lis.style.paddingRight="96px";*/
+						/*lis.style.borderBottom="1px solid #ccc";*/
+						lis.innerHTML = fucename;
+						oul.appendChild(lis);
+					});
+				}
+			}
+		});
+	}
+
+	function showMenuBycode_ss(fucecode, resource, fucename) {
+		var twoLevel = fucecode.substring(0, fucecode.lastIndexOf('_'));
+		var oneLevel = twoLevel.substring(0, twoLevel.lastIndexOf('_'));
+		$("#findMenu").val(fucename);
+		//清空
+		search.style.display = "none"
+		//跳转
+		kjcdShow_ss(oneLevel, twoLevel, fucecode, resource, fucename);
+		event.stopPropagation();
+	}
+
+	document.onkeydown = function () {
+		if (window.event.keyCode == 13) {
+			var firstli = $("#searchul").find("li").eq(0);
+			firstli.click();
+		}
+	}
+
+	function kjcdShow_ss(yjcode, ejcode, sjcode, url, name) {
+		showMenuErji_ss(yjcode,ejcode,sjcode,url,name,3);
+	}
+	function showMenuErji_ss(yjcode,ejcode,sjcode,url,name,level) {
+		var code = yjcode;
+		//隐藏原有iframe
+		$("#edu-cm").find("iframe").hide();
+
+		var src="";
+
+		if(level==3){
+
+			src = "/jsxsd"+url;
+
+			var sjcode = sjcode;
+			//是否已经打开当前三级菜单
+			var sjspan = $("#span_"+sjcode);
+			if(sjspan.length>0){
+				//如果是当前菜单，则再次点击后刷新
+				if($("#"+sjcode).hasClass("active")){
+					var index = $("#span_"+sjcode).attr("frameIndex");
+					$("#Frame"+index).attr("src", $('#Frame'+index).attr("src"));
+					$("#Frame"+index).show();
+				}else{
+					sjspan.click();
+				}
+			}else{
+
+				//打开新的tab页，一级菜单暂不打开
+				$("#edu-cm").append("<iframe id='Frame"+frameIndex+"' name='Frame"+frameIndex+"' data-code='"+code+"' src='"+src+"' style='border: 0; margin: 0; width: 100%; height: 100%'></iframe>");
+				//var title = $("a", t).text();
+
+				var html = "<li data-index= '"+frameIndex+"'><a class=\"current\" ><span   id= 'span_"+sjcode+"' frameIndex='"+frameIndex+"' onclick=\"showTag('"+code+"','"+sjcode+"', '"+frameIndex+"', this)\">"+name+"</span><i class=\"iconfont icon-close01\" onclick=\"closeTag('"+code+"', '"+frameIndex+"', this)\"></i></a><b></b></li>";
+				$(".breadcrumbs > ul > li > a").removeClass("current");
+				$(".breadcrumbs > ul").append(html);
+				frameIndex++;
+				$("#scrollRight").click();
+			}
+
+			if(!$("#"+sjcode).hasClass("active")){
+				//快捷菜单打开时需要联动左侧菜单
+				$("a.active").removeClass("active");
+				$("#"+sjcode).addClass("active");
+				$("ul.accordion > li").removeClass("open");
+				$("#"+sjcode).parents("li").addClass("open");
+				$("ul.submenu").css("display","none");
+				$("#"+sjcode).parents("ul.submenu").css("display","block");
+			}
+		}
+	}
+
+</script>
+
+<script>
+	const dict = {
+		"首页": "Home",
+		"我的桌面": "My Desktop",
+		"公告留言": "Announcements & Messages",
+		"已收公告": "Received Announcements",
+		"已收留言": "Received Messages",
+		"消息通知": "Notifications",
+		"个人信息": "Personal Info",
+		"修改个人信息": "Edit Personal Info",
+		"在线问答": "Online Q&A",
+		"我的信息": "My Info",
+		"教师信息查看": "Teacher Info",
+		"教学周历": "Teaching Calendar",
+		"教学周历查询": "Teaching Calendar Query",
+		"文档管理": "Document Management",
+		"文档内容管理": "Document Content Management",
+		"教学服务": "Teaching Services",
+		"培养方案": "Training Program",
+		"专业培养方案": "Major Training Program",
+		"教学计划": "Teaching Plan",
+		"通选开课申请": "Elective Course Application",
+		"教学任务确认": "Teaching Task Confirmation",
+		"我的课表": "My Timetable",
+		"个人课表信息": "Personal Timetable",
+		"个人调课申请": "Personal Reschedule Application",
+		"班级课表查询": "Class Timetable Query",
+		"教室课表查询": "Classroom Timetable Query",
+		"课程课表查询": "Course Timetable Query",
+		"教学安排查询": "Teaching Arrangement Query",
+		"免听/免修审核": "Exemption Review",
+		"课程信息查询": "Course Info Query",
+		"课程信息": "Course Info",
+		"教室借用": "Classroom Borrowing",
+		"教室借用申请": "Classroom Borrowing Application",
+		"教室借用记录": "Classroom Borrowing Records",
+		"考务成绩": "Exam & Grades",
+		"考试事务": "Exam Affairs",
+		"课程考试安排查询": "Course Exam Arrangement Query",
+		"考务安排查询": "Exam Arrangement Query",
+		"考试信息查询": "Exam Info Query",
+		"监考调代申请": "Invigilation Substitute Application",
+		"学生成绩": "Student Grades",
+		"考勤表": "Attendance Sheet",
+		"学生成绩录入": "Student Grade Entry",
+		"成绩修改管理": "Grade Modification Management",
+		"过程成绩管理": "Process Grade Management",
+		"教学考评": "Teaching Evaluation",
+		"教学评价": "Teaching Evaluation",
+		"评价结果查询": "Evaluation Result Query",
+		"工作量查询": "Workload Query",
+		"我的评价": "My Evaluation",
+		"实践实验": "Practice & Experiment",
+		"毕业设计": "Graduation Project",
+		"课题申报管理": "Project Application Management",
+		"课题修改申请": "Project Modification Application",
+		"学生选题处理": "Student Topic Handling",
+		"任务书填报": "Task Book Submission",
+		"开题报告查看": "Proposal Report View",
+		"过程指导情况": "Process Guidance",
+		"中期报告填报": "Mid-term Report Submission",
+		"成绩录入": "Grade Entry",
+		"教育科研": "Education & Research",
+		"项目申报管理": "Project Application Management",
+		"专家网上评分": "Expert Online Scoring",
+		"项目查询": "Project Query",
+		"项目材料模板": "Project Material Template",
+		"中检专家网上评分": "Mid-term Expert Online Scoring",
+		"结题专家网上评分": "Final Expert Online Scoring",
+		"个人中心": "Personal Center",
+		"教师": "Teacher",
+		"修改密码": "Change Password",
+		"退出登录": "Logout",
+		"请输入菜单名": "Please enter menu name",
+		"常用功能": "Common Functions",
+		"教学进程": "Teaching Progress",
+		"通知公告": "Announcements",
+		"审核通知": "Review Notifications",
+		"学生评教": "Student Evaluation",
+    	"学生选课": "Student Course Selection",
+    	"补考报名": "Make-up Exam Registration",
+    	"重修报名": "Retake Registration",
+    	"学生报到": "Student Check-in",
+    	"学生注册": "Student Registration",
+    	"星期一": "Monday",
+    	"星期二": "Tuesday",
+    	"星期三": "Wednesday",
+    	"星期四": "Thursday",
+    	"星期五": "Friday",
+		"星期六": "Saturday",
+		"星期日": "Sunday",
+		"默认节次模式": "Default Session Mode",
+		"查询教室借用": "Query Classroom Borrowing",
+		"备注": "Remark",
+	};
+
+	const cnNumMap = {
+		"一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9, "十": 10
+	};
+
+	const enWeekMap = {
+		1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten",
+		11: "Eleven", 12: "Twelve", 13: "Thirteen", 14: "Fourteen", 15: "Fifteen", 16: "Sixteen", 17: "Seventeen", 18: "Eighteen", 19: "Nineteen", 20: "Twenty"
+	};
+
+	function weekCnToEn(cn) {
+		if (/^\d+$/.test(cn)) return enWeekMap[parseInt(cn)] || cn;
+		if (cn === "十") return enWeekMap[10];
+		if (cn.length === 2 && cn[0] === "十") return enWeekMap[10 + cnNumMap[cn[1]]];
+		if (cn.length === 2 && cn[1] === "十") return enWeekMap[cnNumMap[cn[0]] * 10];
+		if (cn.length === 2) return enWeekMap[10 + cnNumMap[cn[1]]];
+		return enWeekMap[cnNumMap[cn]] || cn;
+	}
+
+	const regexDict = [
+		{
+			pattern: /第([一二三四五六七八九十\d]+)周/g,
+			replace: (m, p1) => {
+				let en = weekCnToEn(p1);
+				return `Week ${en}`;
+			}
+		},
+		{ pattern: /学年学期/g, replace: "Academic Year & Term" },
+		{ pattern: /我的课程/g, replace: "My Courses" },
+	];
+
+	function injectEnglishStyle() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+        body, .edu-container, .edu-main, .edu-aside, .edu-header, .edu-sideMenu, .submenu, .edu-center, .edu-user, .edu-badge, .breadcrumbs, .personal-title, .grid__label {
+            font-family: 'Segoe UI', Arial, 'Helvetica Neue', Helvetica, sans-serif !important;
+            font-size: 15px !important;
+            letter-spacing: 0.02em;
+        }
+        .edu-sideMenu .submenu li a, .edu-sideMenu .submenu li {
+            font-size: 15px !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            line-height: 1.8 !important;
+        }
+        .edu-sideMenu .submenu li a b.dot {
+            font-size: 12px !important;
+        }
+        .edu-sideMenu .link, .edu-sideMenu .submenu .link {
+            font-size: 16px !important;
+        }
+        .edu-header .edu-user p, .edu-header .edu-user span {
+            font-size: 15px !important;
+        }
+        .edu-sideMenu .submenu {
+            min-width: 180px !important;
+        }
+        .edu-sideMenu .submenu li {
+            position: relative !important;
+            height: auto !important;
+        }
+        .edu-sideMenu .submenu .link {
+            display: block !important;
+            width: 100% !important;
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+	function translateTextNode(node) {
+    if (node.nodeType === 3) {
+        let text = node.nodeValue;
+        let replaced = text;
+        Object.keys(dict).sort((a, b) => b.length - a.length).forEach(zh => {
+            if (replaced.includes(zh)) {
+                replaced = replaced.split(zh).join(dict[zh]);
+            }
+        });
+        regexDict.forEach(({pattern, replace}) => {
+            replaced = replaced.replace(pattern, replace);
+        });
+        if (replaced !== text) node.nodeValue = replaced;
+    }
+}
+
+	function translateAttributes(el) {
+    ['placeholder', 'title', 'alt'].forEach(attr => {
+        if (el.hasAttribute && el.hasAttribute(attr)) {
+            let val = el.getAttribute(attr);
+            if (val) {
+                let replaced = val;
+                Object.keys(dict).sort((a, b) => b.length - a.length).forEach(zh => {
+                    if (replaced.includes(zh)) {
+                        replaced = replaced.split(zh).join(dict[zh]);
+                    }
+                });
+                regexDict.forEach(({pattern, replace}) => {
+                    replaced = replaced.replace(pattern, replace);
+                });
+                if (replaced !== val) el.setAttribute(attr, replaced);
+            }
+        }
+    });
+}
+
+	function walk(node) {
+    translateTextNode(node);
+    if (node.nodeType === 1) {
+        translateAttributes(node);
+        for (let child of node.childNodes) {
+            walk(child);
+        }
+    }
+}
+
+	function translateIframes() {
+    let iframes = document.querySelectorAll('iframe');
+    for (let iframe of iframes) {
+        try {
+            let doc = iframe.contentDocument || iframe.contentWindow.document;
+            if (doc && doc.body) walk(doc.body);
+        } catch (e) {}
+    }
+}
+
+	function observeAndTranslate() {
+    walk(document.body);
+    translateIframes();
+}
+
+	document.addEventListener('DOMContentLoaded', () => {
+    injectEnglishStyle();
+    observeAndTranslate();
+});
+	setInterval(observeAndTranslate, 1000);
+	</script>
+
+</body>
+</html>
